@@ -14,7 +14,9 @@ const Player = () => {
             </div>
         </div>
 
+        
         <div className='flex flex-col items-center gap-1 m-auto'>
+            
             <div className='flex gap-4'>
                 <img className='w-4 cursor-pointer' src={assets.shuffle_icon} alt="" />
                 <img className='w-4 cursor-pointer' src={assets.prev_icon} alt="" />
@@ -22,6 +24,8 @@ const Player = () => {
                 <img className='w-4 cursor-pointer' src={assets.next_icon} alt="" />
                 <img className='w-4 cursor-pointer' src={assets.loop_icon} alt="" />
             </div>
+
+            
             <div className='flex items-center gap-5'>
                 <p>0:00</p>
                 <div className='w-64 h-1 bg-gray-500 rounded-full cursor-pointer'>
@@ -29,13 +33,9 @@ const Player = () => {
                 </div>
                 <p>0:00</p>
             </div>
-
-            <div>
-
-            </div>
-
         </div>
 
+        
         <div className='hidden lg:flex items-center gap-2 opacity-75'>
             <img className='w-4 cursor-pointer' src={assets.plays_icon} alt=""/>
             <img className='w-4 cursor-pointer' src={assets.mic_icon} alt=""/>
