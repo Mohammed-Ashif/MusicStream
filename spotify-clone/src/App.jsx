@@ -1,9 +1,12 @@
 import React from "react";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Spotify Clone</h1>
+    <div className='h-screen bg-black'>
+      <div className='h-[90%] flex'>
+        <Sidebar />
+      </div>
     </div>
   );
 }
