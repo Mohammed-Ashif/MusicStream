@@ -3,6 +3,7 @@
   single object for easy access throughout the application.
 */
 
+import ProPic from './ProPic.jpg'
 import bell_icon from './bell.png'
 import home_icon from './home.png'
 import like_icon from './like.png'
@@ -47,7 +48,11 @@ import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
+/**
+ *  Important Icons
+ */
 export const assets = {
+    ProPic,
     bell_icon,
     home_icon,
     like_icon,
@@ -126,7 +131,22 @@ export const albumsData = [
         image: img15,
         desc:"Your weekly update of the most played tracks",
         bgColor:"#744210"
+    },
+    {   
+        id:6,
+        name: "Sleep",
+        image: img6,
+        desc:"Your weekly update of the most played tracks",
+        bgColor:"#2a4365"
+    },
+    {   
+        id:7,
+        name: "Peaceful Meditation",
+        image: img13,
+        desc:"Your weekly update of the most played tracks",
+        bgColor:"#22543d"
     }
+
 ]
 
 

@@ -1,13 +1,16 @@
 import React from 'react';
 import {songsData} from '../assets/assets';
 import {assets} from '../assets/assets';
+import DisplayHome from './DisplayHome';
+import { Route, Routes } from 'react-router-dom';
 
 const Display = () => {
   return (
-    <div className=''>
-        
+    <div className='w-[100] m-2 px-6 pt-4 rounded bg-[#292929] text-white overflow-auto lg:w-[75%] lg:ml-0'>
+        <Routes>
+          <Route path='/' element={<DisplayHome/>} />
+        </Routes>
     </div>
-
   )
 }
 
