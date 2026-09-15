@@ -144,9 +144,8 @@ export const albumsData = [
         name: "Peaceful Meditation",
         image: img13,
         desc:"Your weekly update of the most played tracks",
-        bgColor:"#22543d"
+        bgColor:"#744210"
     }
-
 ]
 
 

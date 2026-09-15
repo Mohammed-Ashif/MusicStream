@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "./components/Sidebar";
 import Player from "./components/Player";
 import Display from "./components/Display";
+import {BrowserRouter} from 'react-router-dom'
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       </div>
 
       <Player />
-
+      <audio preload='auto'></audio>
     </div>
   );
 }

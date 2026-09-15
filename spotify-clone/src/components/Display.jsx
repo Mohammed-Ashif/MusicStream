@@ -1,14 +1,36 @@
-import React from 'react';
-import {songsData} from '../assets/assets';
+import React, { useEffect, useRef } from 'react';
+import {albumsData, songsData} from '../assets/assets';
 import {assets} from '../assets/assets';
 import DisplayHome from './DisplayHome';
-import { Route, Routes } from 'react-router-dom';
+import DisplayAlbum from './DisplayAlbum';
+import { Route, Routes, useLocation } from 'react-router-dom';
+
 
 const Display = () => {
+
+  const displayRef = useRef();
+  const location = useLocation();
+  //console.log(location);
+  const isAlbum = location.pathname.includes("album");
+  //console.log(isAlbum);
+  const albumID = isAlbum ? location.pathname.slice(-1) : "";
+  //console.log(albumID);
+  const bgColor = albumsData[Number(albumID)].bgColor;
+  //console.log(bgColor);
+
+  useEffect(() => {
+    if (isAlbum) {
+      displayRef.current.style.background = `linear-gradient(${bgColor}, #121212)`;
+    } else {
+      displayRef.current.style.background = `#121212`;
+    }
+  })
+
   return (
-    <div className='w-[100] m-2 px-6 pt-4 rounded bg-[#292929] text-white overflow-auto lg:w-[75%] lg:ml-0'>
+    <div ref={displayRef} className='w-[100] m-2 px-6 pt-4 rounded bg-[#292929] text-white overflow-auto lg:w-[75%] lg:ml-0'>
         <Routes>
-          <Route path='/' element={<DisplayHome/>} />
+          <Route path='/' element={<DisplayHome />} />
+          <Route path='/album/:id' element={<DisplayAlbum />} />
         </Routes>
     </div>
   )
